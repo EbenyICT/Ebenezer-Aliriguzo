@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         galleryItem.className = 'gallery-item';
 
         const img = document.createElement('img');
-        // Ensure the path is correct
-        img.src = `./public/images/${imageName}`;
+        // Correct path to the images in the 'public/images' directory
+        img.src = `images/${imageName}`;
         img.alt = `Image ${index + 1}`;
 
         const description = document.createElement('div');
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         gallery.appendChild(galleryItem);
 
         // Log the path to the console to verify
-        console.log(`Image path set to: ./public/images/${imageName}`);
+        console.log(`Image path set to: images/${imageName}`);
     });
 });
