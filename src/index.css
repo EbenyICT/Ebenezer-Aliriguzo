@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3d3d3; /* Light Gray */
+    background-color: #d3d3d3;
     color: black;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 }
 
 .top-links {
-    background-color: #0277bd; /* Blue */
+    background-color: #0277bd;
     color: white;
     padding: 0.5rem;
     text-align: right;
@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem; /* Reduced height */
+    height: 2rem;
 }
 
 .top-links a {
@@ -41,7 +41,7 @@ body {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px; /* Adjusted width */
+    width: 150px;
 }
 
 .search-container i {
@@ -51,67 +51,67 @@ body {
 }
 
 header {
-    background-color: #0277bd; /* Blue */
+    background-color: #0277bd;
     color: white;
-    padding: 0.5rem 0; /* Adjusted padding */
+    padding: 0.5rem 0;
     text-align: center;
     position: fixed;
     width: 100%;
-    top: 2rem; /* Adjusted top */
+    top: 2rem;
     z-index: 999;
-    height: 2rem; /* Reduced height */
+    height: 2rem;
 }
 
 nav {
-    background-color: #0288d1; /* Blue */
-    padding: 0.5rem; /* Reduced padding */
+    background-color: #0288d1;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
-    top: 4rem; /* Adjusted top */
+    top: 4rem;
     z-index: 998;
-    height: 2rem; /* Reduced height */
+    height: 2rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 0.5rem; /* Reduced margin */
+    margin: 0 0.5rem;
     font-weight: bold;
 }
 
 .headerIcons {
     display: flex;
     justify-content: center;
-    margin: 0.5rem 0; /* Reduced margin */
+    margin: 0.5rem 0; 
 }
 
 .headerIcons i {
     color: white;
-    margin: 0 0.5rem; /* Reduced margin */
+    margin: 0 0.5rem; 
     cursor: pointer;
 }
 
 main {
-    margin-top: 6rem; /* Adjust top to fit below navbar */
+    margin-top: 6rem; 
     overflow-y: scroll;
-    height: calc(100vh - 6rem - 2rem); /* Adjust height to fit within viewport */
+    height: calc(100vh - 6rem - 2rem);
 }
 
 .upload-form {
-    margin: 1rem 0; /* Reduced margin */
-    padding: 0.5rem; /* Reduced padding */
-    background-color: #0277bd; /* Blue */
+    margin: 1rem 0; 
+    padding: 0.5rem;
+    background-color: #0277bd;
     color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 30%; /* Reduced width */
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    height: auto; /* Ensure height adapts to content */
+    height: auto;
 }
 
 .upload-form input[type="file"] {
@@ -137,7 +137,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    margin-top: 2rem; /* Adjust margin to position below the upload form */
+    margin-top: 2rem;
     position: static;
 }
 
@@ -147,7 +147,7 @@ main {
     border-radius: 10px;
     overflow: hidden;
     width: 200px;
-    height: 200px; /* Ensure uniform size */
+    height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     display: flex;
@@ -172,14 +172,14 @@ main {
 }
 
 footer {
-    background-color: #0277bd; /* Blue */
+    background-color: #0277bd;
     color: white;
-    padding: 0.5rem 0; /* Reduced padding */
+    padding: 0.5rem 0;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2rem; /* Reduced height */
+    height: 2rem;
 }
 
 footer a {
