@@ -1,47 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Hub</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3; /* Light Gray */
+            color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #0277bd; /* Blue */
+            color: white;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #0288d1; /* Blue */
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        .headerIcons {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .headerIcons i {
+            color: white;
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+        .upload-form {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .upload-form input[type="file"] {
+            margin: 1rem 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .gallery-item {
+            margin: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .description {
+            padding: 0.5rem;
+            background-color: #fff;
+            text-align: left;
+        }
+        footer {
+            background-color: #0277bd; /* Blue */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        footer a {
+            color: white;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body>
     <header>
-      <h1>Welcome to PhotoHub</h1>
-  </header>
-    <header>
-      <img src=".image/Human JPEG 1.jpg" alt="" />
-
-      <nav>
-        <a href="">Home</a>
-        <a href="">Photo Hub</a>
-        <a href="">Photo Galary</a>
-        <a href="">Photo Catalogue</a>
-        <a href="">Contact</a>
-      </nav>
-
-      <section class="headerIcons">
-        <i class="bi bi-search"></i>
-        <i class="bi bi-heart"></i>
-        <i class="bi bi-bag"></i>
-      </section>
+        <h1>Welcome to PhotoHub</h1>
+        <section class="headerIcons">
+            <i class="bi bi-search"></i>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-bag"></i>
+        </section>
+        <nav>
+            <a href="#">HomePhoto</a>
+            <a href="#">HubPhoto</a>
+            <a href="#">GalaryPhoto</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">About</a>
+            <a href="#">Ask Chat Box</a>
+        </nav>
+        <div>
+            <a href="#">Search</a> |
+            <a href="#">Subscribe</a> |
+            <a href="#">Login/Signup</a>
+        </div>
     </header>
-
     <main>
-      <section class="PhotoHub">
-        <img src="./images/Human JPEG 1.jpg" alt="heroBg" />
-      </section>
-
-      <section class="heroText">
-        <span>NEW PHOTOS COLLECTIONS 2024</span>
-        <h1>ARRIVALS PHOTOS</h1>
-        <button>POST PHOTO NOW</button>
-      </section>
+        <section class="upload-form">
+            <h2>Upload Your Picture</h2>
+            <form method="post" enctype="multipart/form-data" action="upload.php">
+                <input type="file" name="photo" accept="image/*" required>
+                <button type="submit">PostPhotoNow/Upload</button>
+            </form>
+        </section>
+        <section class="gallery" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-item">
+                <img src="1EngineerMaduChibuezeMutui.JPG" alt="Engineer Madu Chibueze Mutui">
+                <div class="description">Engineer Madu Chibueze Mutui</div>
+            </div>
+            <div class="gallery-item">
+                <img src="2Ebenezer.JPG" alt="Ebenezer">
+                <div class="description">Ebenezer</div>
+            </div>
+            <div class="gallery-item">
+                <img src="3Mike.JPG" alt="Mike">
+                <div class="description">Mike</div>
+            </div>
+            <div class="gallery-item">
+                <img src="4Vivian.JPG" alt="Vivian">
+                <div class="description">Vivian</div>
+            </div>
+            <div class="gallery-item">
+                <img src="5Ejike.JPG" alt="Ejike">
+                <div class="description">Ejike</div>
+            </div>
+            <div class="gallery-item">
+                <img src="6Jennifer.JPG" alt="Jennifer">
+                <div class="description">Jennifer</div>
+            </div>
+            <div class="gallery-item">
+                <img src="7Zion.JPG" alt="Zion">
+                <div class="description">Zion</div>
+            </div>
+            <div class="gallery-item">
+                <img src="8Success.JPG" alt="Success">
+                <div class="description">Success</div>
+            </div>
+            <div class="gallery-item">
+                <img src="9Victor.JPG" alt="Victor">
+                <div class="description">Victor</div>
+            </div>
+            <div class="gallery-item">
+                <img src="10Divine.JPG" alt="Divine">
+                <div class="description">Divine</div>
+            </div>
+            <div class="gallery-item">
+                <img src="11Uzo.JPG" alt="Uzo">
+                <div class="description">Uzo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="12Precious.JPG" alt="Precious">
+                <div class="description">Precious</div>
+            </div>
+            <div class="gallery-item">
+                <img src="13Mbappe.JPG" alt="Mbappe">
+                <div class="description">Mbappe</div>
+            </div>
+            <div class="gallery-item">
+                <img src="14Kylian.JPG" alt="Kylian">
+                <div class="description">Kylian</div>
+            </div>
+            <div class="gallery-item">
+                <img src="15Ifeoma.JPG" alt="Ifeoma">
+                <div class="description">Ifeoma</div>
+            </div>
+            <div class="gallery-item">
+                <img src="16Chichi.JPG" alt="Chichi">
+                <div class="description">Chichi</div>
+            </div>
+            <div class="gallery-item">
+                <img src="17Ugo.JPG" alt="Ugo">
+                <div class="description">Ugo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="18Ugochi.JPG" alt="Ugochi">
+                <div class="description">Ugochi</div>
+            </div>
+            <div class="gallery-item">
+                <img src="19Miracle.JPG" alt="Miracle">
+                <div class="description">Miracle</div>
+            </div>
+            <div class="gallery-item">
+                <img src="20Eze.JPG" alt="Eze">
+                <div class="description">Eze</div>
+            </div>
+            <div class="gallery-item">
+                <img src="21King.JPG" alt="King">
+                <div class="description">King</div>
+            </div>
+            <div class="gallery-item">
+                <img src="22White.JPG" alt="White">
+                <div class="description">White</div>
+            </div>
+            <div class="gallery-item">
+                <img src="23Healthcare.JPG" alt="Healthcare">
+                <div class="description">Healthcare</div>
+            </div>
+            <div class="gallery-item">
+                <img src="24Human.JPG" alt="Human">
+                <div class="description">Human</div>
+            </div>
+            <div class="gallery-item">
+                <img src="25Woman.JPG" alt="Woman">
+                <div class="description">Woman</div>
+            </div>
+            <div class="gallery-item">
+                <img src="26Care.JPG" alt="Care">
+                <div class="description">Care</div>
+            </div>
+            <div class="gallery-item">
+                <img src="27Doctor.JPG" alt="Doctor">
+                <div class="description">Doctor</div>
+            </div>
+            <div class="gallery-item">
+                <img src="28Nurse.JPG" alt="Nurse">
+                <div class="description">Nurse</div>
+            </div>
+            <div class="gallery-item">
+                <img src="29Psycho.JPG" alt="Psycho">
+                <div class="description">Psycho</div>
+            </div>
+        </section>
     </main>
-  </body>
+    <footer>
+        <p>Phone Number: +2348033489206</p>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        <a href="https://www.pinterest.com" target="_blank">Pinterest</a>
+        <a href="https://www.reddit.com" target="_blank">Reddit</a>
+        <a href="https://www.snapchat.com" target="_blank">Snapchat</a>
+        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+        <a href="https://www.telegram.org" target="_blank">Telegram</a>
+        <a href="https://www.messenger.com" target="_blank">Messenger</a>
+    </footer>
+</body>
 </html>
