@@ -26,13 +26,12 @@ body {
     height: 2rem;
 }
 
-.top-links a,
+.header-links a,
 nav a,
-.footer-links a,
-.footer-content p {
+.footer-links a {
     color: white;
     margin: 0 0.5rem;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
 }
 
 .search-container {
@@ -142,8 +141,8 @@ main {
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Reduce image size */
+    height: 150px; /* Reduce image size */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     display: flex;
@@ -170,9 +169,9 @@ main {
 }
 
 footer {
-    background-color: #0277bd;
+    background-color: #0277bd; /* Blue background color */
     color: white;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0; /* Reduce padding */
     text-align: center;
     font-size: 0.9rem;
 }
