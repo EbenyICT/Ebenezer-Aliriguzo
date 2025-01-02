@@ -32,24 +32,6 @@ body {
     text-decoration: none;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-box {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 150px;
-}
-
-.search-container i {
-    color: white;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
 header {
     background-color: #0277bd;
     color: white;
@@ -81,18 +63,6 @@ nav a {
     font-weight: bold;
 }
 
-.headerIcons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-.headerIcons i {
-    color: white;
-    margin: 0 0.5rem;
-    cursor: pointer;
-}
-
 main {
     margin-top: 6rem;
     overflow-y: scroll;
@@ -111,7 +81,6 @@ main {
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    height: auto;
 }
 
 .upload-form input[type="file"] {
@@ -176,38 +145,32 @@ main {
 footer {
     background-color: #0277bd;
     color: white;
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
 .footer-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.footer-content p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.footer-category {
+    margin: 1rem 0;
 }
 
 .social-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .social-icons a {
     color: white;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-size: 1.5rem; 
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
+    margin: 0.5rem;
+    font-size: 1.5rem;
 }
