@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
-    // Function to dynamically add images to the gallery
     const gallery = document.getElementById('gallery');
 
     const imageNames = [
@@ -41,8 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         galleryItem.className = 'gallery-item';
 
         const img = document.createElement('img');
-        // Correct path to the images in the 'public/images' directory
-        img.src = `/images/${imageName}`;
+        img.src = `/images/${imageName}`; // This is the correct path for GitHub Pages
         img.alt = `Image ${index + 1}`;
 
         const description = document.createElement('div');
