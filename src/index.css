@@ -32,16 +32,45 @@ body {
     text-decoration: none;
 }
 
-header {
+footer {
     background-color: #0277bd;
     color: white;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 2rem;
-    z-index: 999;
-    height: 2rem;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    margin-right: 1rem; /* Added spacing between links */
+    margin-left: 1rem;  /* Added spacing between links */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-category {
+    margin: 1rem 0;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0.5rem;
+    font-size: 1.5rem;
 }
 
 nav {
@@ -142,35 +171,7 @@ main {
     text-align: center;
 }
 
-footer {
-    background-color: #0277bd;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 0;
-}
-
-.footer-category {
-    margin: 1rem 0;
-}
-
-.social-icons {
-    margin-top: 1rem;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0.5rem;
-    font-size: 1.5rem;
+/* Style for spacing */
+.footer-space {
+    margin: 0 1rem;
 }
