@@ -1,213 +1,163 @@
+/* General layout adjustments for header, footer, and links */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3d3d3; /* Light Gray */
-    color: black;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
 }
 
-.top-links {
-    background-color: #0277bd; /* Blue */
+/* Header Styling */
+header {
+    background-color: #2d2d2d;
     color: white;
-    padding: 0.5rem;
-    text-align: right;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2rem; /* Reduced height */
+    padding: 20px;
+    text-align: center;
 }
 
-.top-links a {
+header .top-links {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+header .top-links a {
     color: white;
-    margin: 0 0.5rem;
+    margin-right: 10px;
     text-decoration: none;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
+header .top-links a:hover {
+    text-decoration: underline;
 }
 
-.search-box {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 150px; /* Adjusted width */
-}
-
-.search-container i {
-    color: white;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-header {
-    background-color: #0277bd; /* Blue */
-    color: white;
-    padding: 0.5rem 0; /* Adjusted padding */
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 2rem; /* Adjusted top */
-    z-index: 999;
-    height: 2rem; /* Reduced height */
+header h1 {
+    font-size: 36px;
+    margin: 0;
 }
 
 nav {
-    background-color: #0288d1; /* Blue */
-    padding: 0.5rem; /* Reduced padding */
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 4rem; /* Adjusted top */
-    z-index: 998;
-    height: 2rem; /* Reduced height */
+    margin-top: 20px;
 }
 
 nav a {
     color: white;
+    margin-right: 20px;
     text-decoration: none;
-    margin: 0 0.5rem; /* Reduced margin */
-    font-weight: bold;
 }
 
-.headerIcons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0; /* Reduced margin */
+nav a:hover {
+    color: #f1c40f;
 }
 
-.headerIcons i {
-    color: white;
-    margin: 0 0.5rem; /* Reduced margin */
-    cursor: pointer;
-}
-
+/* Main Section Styling */
 main {
-    margin-top: 6rem; /* Adjust top to fit below navbar */
-    overflow-y: scroll;
-    height: calc(100vh - 6rem - 2rem); /* Adjust height to fit within viewport */
+    padding: 30px;
 }
 
 .upload-form {
-    margin: 1rem 0; /* Reduced margin */
-    padding: 0.5rem; /* Reduced padding */
-    background-color: #0277bd; /* Blue */
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 30%; /* Reduced width */
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    height: auto; /* Ensure height adapts to content */
+    margin-bottom: 40px;
 }
 
 .upload-form input[type="file"] {
-    background-color: #fff;
-    color: black;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 .upload-form button {
-    background-color: #fff;
-    color: #0277bd;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+}
+
+.upload-form button:hover {
+    background-color: #45a049;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    margin-top: 2rem; /* Adjust margin to position below the upload form */
-    position: static;
 }
 
 .gallery-item {
-    margin: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 200px;
-    height: 200px; /* Ensure uniform size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
+    margin: 10px;
+    width: 23%;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    flex-grow: 1;
+    border-radius: 8px;
 }
 
 .description {
-    padding: 0.5rem;
-    background-color: #fff;
     text-align: center;
+    margin-top: 10px;
 }
 
+/* Footer Styling */
 footer {
-    background-color: #0277bd; /* Blue */
+    background-color: #2d2d2d;
     color: white;
-    padding: 1rem 0; /* Increased padding for better spacing */
-    text-align: center;
+    padding: 30px 0;
 }
 
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+footer .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.footer-content p {
-    margin: 0.5rem 0; /* Added margin for better spacing */
-    font-size: 1.2rem; /* Increased font size for better readability */
-}
-
-.social-icons {
+/* Footer Links Section */
+.footer-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5rem;
 }
 
-.social-icons a {
+.footer-category {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-category h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
     color: white;
-    margin: 0 0.5rem;
     text-decoration: none;
-    font-size: 1.5rem; /* Increased icon size */
-    transition: transform 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f1c40f; /* Hover color */
+}
+
+/* Remove underlining from links */
+footer .footer-links a {
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+    color: #f1c40f; /* Hover color */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    margin-right: 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
+    color: #007bff; /* Hover color for social media icons */
+}
+
+/* Optional: make footer content more visually appealing */
+footer .footer-category a:hover {
+    color: #f1c40f;
 }
