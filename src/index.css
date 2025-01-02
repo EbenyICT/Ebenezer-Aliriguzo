@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3d3d3;
+    background-color: #d3d3d3; /* Light Gray */
     color: black;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 }
 
 .top-links {
-    background-color: #0277bd;
+    background-color: #0277bd; /* Blue */
     color: white;
     padding: 0.5rem;
     text-align: right;
@@ -23,9 +23,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
+    height: 2rem; /* Reduced height */
 }
 
+.top-links a,
 .header-links a,
 nav a,
 .footer-links a {
@@ -43,7 +44,7 @@ nav a,
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px;
+    width: 150px; /* Adjusted width */
 }
 
 .search-container i {
@@ -53,60 +54,60 @@ nav a,
 }
 
 header {
-    background-color: #0277bd;
+    background-color: #0277bd; /* Blue */
     color: white;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0; /* Adjusted padding */
     text-align: center;
     position: fixed;
     width: 100%;
-    top: 2rem;
+    top: 2rem; /* Adjusted top */
     z-index: 999;
-    height: 2rem;
+    height: 2rem; /* Reduced height */
 }
 
 nav {
-    background-color: #0288d1;
-    padding: 0.5rem;
+    background-color: #0288d1; /* Blue */
+    padding: 0.5rem; /* Reduced padding */
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
-    top: 4rem;
+    top: 4rem; /* Adjusted top */
     z-index: 998;
-    height: 2rem;
+    height: 2rem; /* Reduced height */
 }
 
 .headerIcons {
     display: flex;
     justify-content: center;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0; /* Reduced margin */
 }
 
 .headerIcons i {
     color: white;
-    margin: 0 0.5rem;
+    margin: 0 0.5rem; /* Reduced margin */
     cursor: pointer;
 }
 
 main {
-    margin-top: 6rem;
+    margin-top: 6rem; /* Adjust top to fit below navbar */
     overflow-y: scroll;
-    height: calc(100vh - 6rem - 2rem);
+    height: calc(100vh - 6rem - 2rem); /* Adjust height to fit within viewport */
 }
 
 .upload-form {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background-color: #0277bd;
+    margin: 1rem 0; /* Reduced margin */
+    padding: 0.5rem; /* Reduced padding */
+    background-color: #0277bd; /* Blue */
     color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 30%;
+    width: 30%; /* Reduced width */
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    height: auto;
+    height: auto; /* Ensure height adapts to content */
 }
 
 .upload-form input[type="file"] {
@@ -132,7 +133,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem; /* Adjust margin to position below the upload form */
     position: static;
 }
 
@@ -141,8 +142,8 @@ main {
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    width: 150px; /* Reduce image size */
-    height: 150px; /* Reduce image size */
+    width: 200px;
+    height: 200px; /* Ensure uniform size */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     display: flex;
@@ -169,11 +170,10 @@ main {
 }
 
 footer {
-    background-color: #0277bd; /* Blue background color */
+    background-color: #1e3a5f; /* Blue background color */
     color: white;
-    padding: 0.5rem 0; /* Reduce padding */
+    padding: 1rem 0; /* Increased padding for better spacing */
     text-align: center;
-    font-size: 0.9rem;
 }
 
 .footer-content {
@@ -197,7 +197,7 @@ footer {
 
 .footer-content p {
     margin: 0.5rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increased font size for better readability */
 }
 
 .social-icons {
@@ -211,12 +211,17 @@ footer {
     color: white;
     margin: 0 0.5rem;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increased icon size */
     transition: transform 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+.footer-content .contact-info {
+    margin-top: 1rem;
+    text-align: center;
 }
 
 /* Responsive Design */
