@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem; /* Reduced height */
+    height: 2rem; 
 }
 
 .top-links a,
@@ -143,7 +143,7 @@ main {
     border-radius: 10px;
     overflow: hidden;
     width: 200px;
-    height: 200px; /* Ensure uniform size */
+    height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     display: flex;
@@ -197,7 +197,7 @@ footer {
 
 .footer-content p {
     margin: 0.5rem 0;
-    font-size: 1.2rem; /* Increased font size for better readability */
+    font-size: 1.2rem;
 }
 
 .social-icons {
@@ -211,12 +211,12 @@ footer {
     color: white;
     margin: 0 0.5rem;
     text-decoration: none;
-    font-size: 1.5rem; /* Increased icon size */
+    font-size: 1.5rem;
     transition: transform 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
+    transform: scale(1.2);
 }
 
 .footer-content .contact-info {
