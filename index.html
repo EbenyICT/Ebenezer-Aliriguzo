@@ -1,242 +1,217 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d3d3d3;
-    color: black;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-.top-links {
-    background-color: #0277bd;
-    color: white;
-    padding: 0.5rem;
-    text-align: right;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2rem;
-}
-
-.header-links a,
-nav a,
-.footer-links a {
-    color: white;
-    margin: 0 0.5rem;
-    text-decoration: none; /* Remove underline */
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-box {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 150px;
-}
-
-.search-container i {
-    color: white;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-header {
-    background-color: #0277bd;
-    color: white;
-    padding: 0.5rem 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 2rem;
-    z-index: 999;
-    height: 2rem;
-}
-
-nav {
-    background-color: #0288d1;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 4rem;
-    z-index: 998;
-    height: 2rem;
-}
-
-.headerIcons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-.headerIcons i {
-    color: white;
-    margin: 0 0.5rem;
-    cursor: pointer;
-}
-
-main {
-    margin-top: 6rem;
-    overflow-y: scroll;
-    height: calc(100vh - 6rem - 2rem);
-}
-
-.upload-form {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background-color: #0277bd;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    height: auto;
-}
-
-.upload-form input[type="file"] {
-    background-color: #fff;
-    color: black;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-}
-
-.upload-form button {
-    background-color: #fff;
-    color: #0277bd;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    position: static;
-}
-
-.gallery-item {
-    margin: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 150px; /* Reduce image size */
-    height: 150px; /* Reduce image size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    flex-grow: 1;
-}
-
-.description {
-    padding: 0.5rem;
-    background-color: #fff;
-    text-align: center;
-}
-
-footer {
-    background-color: #0277bd; /* Blue background color */
-    color: white;
-    padding: 0.5rem 0; /* Reduce padding */
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    margin: 0.2rem 0.5rem;
-}
-
-.footer-content p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-}
-
-.social-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5rem;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .upload-form,
-    .gallery-item {
-        width: 80%;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links a {
-        margin: 0.5rem 0;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Hub</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-links">
+            <marquee behavior="scroll" direction="left">
+                <strong>WELCOME TO YOUR PHOTO HUB.</strong> Explore the wonders of nature, share its beauty through the power of technology, and enjoy the captivating moments captured through the lens of innovation.
+            </marquee>
+            <div class="header-links">
+                <a href="#">Subscribe</a>
+                <a href="#">Donations and Charity</a>
+                <a href="#">Scholarships</a>
+                <a href="#">Login/Signup</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-box">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+        <h1>Welcome to PhotoHub</h1>
+        <nav>
+            <a href="#">HomePhoto</a>
+            <a href="#">PhotoHub</a>
+            <a href="#">GalleryPhoto</a>
+            <a href="#">Catalogue</a>
+            <a href="#">About Us</a>
+            <a href="#">Market Place</a>
+            <a href="#">Post Photo</a>
+            <a href="#">Profile</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Ask Chat Box</a>
+        </nav>
+    </header>
+    <main>
+        <section class="upload-form">
+            <h2>Upload Your Picture</h2>
+            <form method="post" enctype="multipart/form-data" action="upload.php">
+                <input type="file" name="photo" accept="image/*" required>
+                <button type="submit">Post Photo</button>
+            </form>
+        </section>
+        <section class="gallery" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-item">
+                <img src="public/images/1EngineerMaduChibuezeMutui.JPG" alt="Image 1">
+                <div class="description">Image 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/2Ebenezer.JPG" alt="Image 2">
+                <div class="description">Image 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/3Mike.JPG" alt="Image 3">
+                <div class="description">Image 3</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/4Vivian.JPG" alt="Image 4">
+                <div class="description">Image 4</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/5Ejike.JPG" alt="Image 5">
+                <div class="description">Image 5</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/6Jennifer.JPG" alt="Image 6">
+                <div class="description">Image 6</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/7Zion.JPG" alt="Image 7">
+                <div class="description">Image 7</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/8Success.JPG" alt="Image 8">
+                <div class="description">Image 8</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/9Victor.JPG" alt="Image 9">
+                <div class="description">Image 9</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/10Divine.JPG" alt="Image 10">
+                <div class="description">Image 10</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/11Uzo.JPG" alt="Image 11">
+                <div class="description">Image 11</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/12Precious.JPG" alt="Image 12">
+                <div class="description">Image 12</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/13Mbappe.JPG" alt="Image 13">
+                <div class="description">Image 13</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/14Kylian.JPG" alt="Image 14">
+                <div class="description">Image 14</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/15Ifeoma.JPG" alt="Image 15">
+                <div class="description">Image 15</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/16Chichi.JPG" alt="Image 16">
+                <div class="description">Image 16</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/17Ugo.JPG" alt="Image 17">
+                <div class="description">Image 17</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/18Ugochi.JPG" alt="Image 18">
+                <div class="description">Image 18</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/19Miracle.JPG" alt="Image 19">
+                <div class="description">Image 19</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/20Eze.JPG" alt="Image 20">
+                <div class="description">Image 20</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/21King.JPG" alt="Image 21">
+                <div class="description">Image 21</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/22White.JPG" alt="Image 22">
+                <div class="description">Image 22</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/23Healthcare.JPG" alt="Image 23">
+                <div class="description">Image 23</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/24Human.JPG" alt="Image 24">
+                <div class="description">Image 24</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/25Woman.JPG" alt="Image 25">
+                <div class="description">Image 25</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/26Care.JPG" alt="Image 26">
+                <div class="description">Image 26</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/27Doctor.JPG" alt="Image 27">
+                <div class="description">Image 27</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/28Nurse.JPG" alt="Image 28">
+                <div class="description">Image 28</div>
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/29Psycho.JPG" alt="Image 29">
+                <div class="description">Image 29</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+                <a href="#">HomePhoto</a>
+                <a href="#">PhotoHub</a>
+                <a href="#">GalleryPhoto</a>
+                <a href="#">Catalogue</a>
+                <a href="#">About Us</a>
+                <a href="#">Market Place</a>
+                <a href="#">Post Photo</a>
+                <a href="#">Profile</a>
+                <a href="#">Blog</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Ask Chat Box</a>
+                <a href="#">Subscribe</a>
+                <a href="#">Donations and Charity</a>
+                <a href="#">Scholarships</a>
+                <a href="#">Login/Signup</a>
+            </div>
+            <p>Phone Number: +2348033489206</p>
+            <div class="social-icons">
+                <a href="https://web.facebook.com/ebenezeruzoma" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://wa.me/2348033489206" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/ebenezer-aliriguzo-117390215/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://mail.google.com/" target="_blank"><i class="bi bi-google"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.pinterest.com" target="_blank"><i class="bi bi-pinterest"></i></a>
+                <a href="https://www.reddit.com" target="_blank"><i class="bi bi-reddit"></i></a>
+                <a href="https://www.snapchat.com" target="_blank"><i class="bi bi-snapchat"></i></a>
+                <a href="https://www.telegram.org" target="_blank"><i class="bi bi-telegram"></i></a>
+                <a href="https://www.messenger.com" target="_blank"><i class="bi bi-messenger"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
