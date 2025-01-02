@@ -1,3 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Hub</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Ensure the links are displayed in a horizontal line */
+        .top-links a, .footer-links a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Prevent separator lines between links */
+        .footer-links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Style adjustments for better presentation */
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-category {
+            margin-right: 30px;
+        }
+
+        .footer-category h4 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* For better visibility on social media icons */
+        .social-icons a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-links">
+            <marquee behavior="scroll" direction="left">
+                <strong>WELCOME TO PHOTO HUB.Explore, share, and enjoy beautiful moments captured</strong>
+            </marquee> 
+            <a href="#">Subscribe</a>
+            <a href="#">Donations and Charity</a>
+            <a href="#">Scholarships</a>
+            <a href="#">Login/Signup</a>
+        </div>
+        <h1>Welcome to PhotoHub</h1>
+        
+        <nav>
+            <a href="#">HomePhoto</a>
+            <a href="#">PhotoHub</a>
+            <a href="#">GalleryPhoto</a>
+            <a href="#">Catalogue</a>
+            <a href="#">About Us</a>
+            <a href="#">Market Place</a>
+            <a href="#">Post Photo</a>
+            <a href="#">Profile</a>    
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Ask Chat Box</a>
+        </nav>
+    </header>
+    <main>
+        <section class="upload-form">
+            <h2>Upload Your Picture</h2>
+            <form method="post" enctype="multipart/form-data" action="upload.js">
+                <input type="file" name="photo" accept="image/*" required>
+                <button type="submit">Post Photo</button>
+            </form>
+        </section>
+        <section class="gallery" id="gallery">
+            <h2>Gallery</h2>
+            <!-- Gallery items will go here -->
+        </section>
+    </main>
 <footer>
     <div class="footer-content">
         <!-- Contact Information -->
