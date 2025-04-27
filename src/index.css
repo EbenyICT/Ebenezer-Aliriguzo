@@ -224,16 +224,39 @@ footer {
     text-align: center;
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1100;
+    cursor: pointer;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .upload-form,
-    .gallery-item {
-        width: 80%;
+    .hamburger-menu {
+        display: block;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem 0;
+        text-align: center;
     }
 
     .footer-links {
