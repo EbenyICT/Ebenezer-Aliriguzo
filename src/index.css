@@ -65,6 +65,17 @@ header {
     height: 2rem;
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1100;
+    cursor: pointer;
+}
+
 nav {
     background-color: #0288d1;
     padding: 0.5rem;
@@ -75,18 +86,6 @@ nav {
     top: 4rem;
     z-index: 998;
     height: 2rem;
-}
-
-.headerIcons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-.headerIcons i {
-    color: white;
-    margin: 0 0.5rem;
-    cursor: pointer;
 }
 
 main {
@@ -226,14 +225,14 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .upload-form,
-    .gallery-item {
-        width: 80%;
+    .hamburger-menu {
+        display: block;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-links {
