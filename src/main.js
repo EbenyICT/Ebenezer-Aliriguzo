@@ -1,44 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM fully loaded and parsed');
 
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const nav = document.querySelector('nav');
+  // Function to dynamically add images to the gallery
+  const gallery = document.getElementById('gallery');
+  const imageNames = [
+    '1EngineerMaduChibuezeMutui.JPG',
+    '2Ebenezer.JPG',
+    '3Mike.JPG',
+    '4Vivian.JPG',
+    '5Ejike.JPG',
+    '6Jennifer.JPG',
+    '7Zion.JPG',
+    '8Success.JPG',
+    '9Victor.JPG',
+    '10Divine.JPG',
+    '11Uzo.JPG',
+    '12Precious.JPG',
+    '13Mbappe.JPG',
+    '14Kylian.JPG',
+    '15Ifeoma.JPG',
+    '16Chichi.JPG',
+    '17Ugo.JPG',
+    '18Ugochi.JPG',
+    '19Miracle.JPG',
+    '20Eze.JPG',
+    '21King.JPG',
+    '22White.JPG',
+    '23Healthcare.JPG',
+    '24Human.JPG',
+    '25Woman.JPG',
+    '26Care.JPG',
+    '27Doctor.JPG',
+    '28Nurse.JPG',
+    '29Psycho.JPG'
+  ];
 
-    // Hamburger menu functionality
-    hamburgerMenu.addEventListener('click', () => {
-        nav.classList.toggle('hidden');
-    });
+  imageNames.forEach((imageName, index) => {
+    const galleryItem = document.createElement('div');
+    galleryItem.className = 'gallery-item';
 
-    // Upload functionality
-    const uploadForm = document.getElementById('uploadForm');
-    const gallery = document.getElementById('gallery');
+    const img = document.createElement('img');
+    img.src = `${imageName}`; // Assuming images are in the root directory
+    img.alt = `Image ${index + 1}`;
 
-    uploadForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const fileInput = document.getElementById('photoInput');
-        const file = fileInput.files[0];
+    const description = document.createElement('div');
+    description.className = 'description';
+    description.textContent = `Image ${index + 1}`;
 
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const galleryItem = document.createElement('div');
-                galleryItem.className = 'gallery-item';
+    galleryItem.appendChild(img);
+    galleryItem.appendChild(description);
+    gallery.appendChild(galleryItem);
 
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = 'Uploaded Picture';
-
-                const description = document.createElement('div');
-                description.className = 'description';
-                description.textContent = 'Uploaded Picture';
-
-                galleryItem.appendChild(img);
-                galleryItem.appendChild(description);
-                gallery.appendChild(galleryItem);
-            };
-            reader.readAsDataURL(file);
-        } else {
-            alert('Please select a file to upload.');
-        }
-    });
+    // Log the path to the console to verify
+    console.log(`Image path set to: ${imageName}`);
+  });
 });
+.gitignore
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
