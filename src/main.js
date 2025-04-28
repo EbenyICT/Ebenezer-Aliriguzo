@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
 
+  // Dynamically load the header
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+      console.log('Header loaded successfully');
+    })
+    .catch(error => console.error('Error loading header:', error));
+
+  // Dynamically load the footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+
   // Function to dynamically add images to the gallery
   const gallery = document.getElementById('gallery');
   const imageNames = [
@@ -35,48 +53,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     '29Psycho.JPG'
   ];
 
-  imageNames.forEach((imageName, index) => {
-    const galleryItem = document.createElement('div');
-    galleryItem.className = 'gallery-item';
+  if (gallery) {
+    imageNames.forEach((imageName, index) => {
+      const galleryItem = document.createElement('div');
+      galleryItem.className = 'gallery-item';
 
-    const img = document.createElement('img');
-    img.src = `${imageName}`; // Assuming images are in the root directory
-    img.alt = `Image ${index + 1}`;
+      const img = document.createElement('img');
+      img.src = `public/images/${imageName}`; // Assuming images are in the "public/images" directory
+      img.alt = `Image ${index + 1}`;
 
-    const description = document.createElement('div');
-    description.className = 'description';
-    description.textContent = `Image ${index + 1}`;
+      const description = document.createElement('div');
+      description.className = 'description';
+      description.textContent = `Image ${index + 1}`;
 
-    galleryItem.appendChild(img);
-    galleryItem.appendChild(description);
-    gallery.appendChild(galleryItem);
+      galleryItem.appendChild(img);
+      galleryItem.appendChild(description);
+      gallery.appendChild(galleryItem);
 
-    // Log the path to the console to verify
-    console.log(`Image path set to: ${imageName}`);
+      // Log the path to the console to verify
+      console.log(`Image path set to: public/images/${imageName}`);
+    });
+  }
+
+  // Add a scroll-to-top button
+  const scrollToTopButton = document.createElement('button');
+  scrollToTopButton.innerText = '↑ Top';
+  scrollToTopButton.classList.add('scroll-to-top');
+  document.body.appendChild(scrollToTopButton);
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    console.log('Scrolled to top');
   });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  // Log a message when all scripts are loaded
+  console.log('Main.js script execution completed');
 });
-.gitignore
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
