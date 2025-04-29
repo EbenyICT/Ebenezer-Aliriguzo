@@ -7,22 +7,45 @@
     <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
-    <header>
-        <h1>Donations and Charity</h1>
-    </header>
+    <!-- Header will be dynamically loaded here -->
     <main>
         <section>
             <h2>Support Our Cause</h2>
             <p>Help us make a difference by contributing to our charity initiatives.</p>
-            <form>
+            <form action="process-donation.php" method="post">
                 <label for="donation">Donation Amount:</label>
-                <input type="number" id="donation" name="donation" required>
+                <input type="number" id="donation" name="donation" placeholder="Enter amount" required>
+
+                <label for="currency">Choose your currency:</label>
+                <select id="currency" name="currency" required>
+                    <option value="USD">$ - US Dollar</option>
+                    <option value="EUR">€ - Euro</option>
+                    <option value="GBP">£ - British Pound</option>
+                    <option value="JPY">¥ - Japanese Yen</option>
+                    <option value="AUD">A$ - Australian Dollar</option>
+                    <option value="CAD">C$ - Canadian Dollar</option>
+                    <option value="NGN">₦ - Nigerian Naira</option>
+                    <option value="INR">₹ - Indian Rupee</option>
+                    <option value="ZAR">R - South African Rand</option>
+                    <option value="CNY">¥ - Chinese Yuan</option>
+                    <option value="BRL">R$ - Brazilian Real</option>
+                    <option value="KES">KSh - Kenyan Shilling</option>
+                </select>
+
+                <label for="payment-method">Choose your payment method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="paypal">PayPal</option>
+                    <option value="stripe">Stripe</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="flutterwave">Flutterwave</option>
+                    <option value="paystack">Paystack</option>
+                </select>
+
                 <button type="submit">Donate</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>© 2025 | Aboveskye Photo Hub | All Rights Reserved</p>
-    </footer>
+    <!-- Footer will be dynamically loaded here -->
+    <script src="src/main.js" defer></script>
 </body>
 </html>
