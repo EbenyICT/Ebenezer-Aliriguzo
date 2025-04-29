@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
-    <header>
-        <h1>Your Profile</h1>
-    </header>
+    <!-- Header will be dynamically loaded here -->
     <main>
         <section class="profile-details">
             <h2>Welcome, [Your Name]</h2>
@@ -17,13 +15,12 @@
             <p>Joined: [Joining Date]</p>
         </section>
         <section class="profile-actions">
-            <button>Update Profile</button>
-            <button>Change Password</button>
-            <button>Logout</button>
+            <button onclick="window.location.href='updateprofile.html'">Update Profile</button>
+            <button onclick="window.location.href='changepassword.html'">Change Password</button>
+            <button onclick="window.location.href='logout.html'">Logout</button>
         </section>
     </main>
-    <footer>
-        <p>© 2025 | Aboveskye Photo Hub | All Rights Reserved</p>
-    </footer>
+    <!-- Footer will be dynamically loaded here -->
+    <script src="src/main.js" defer></script>
 </body>
 </html>
