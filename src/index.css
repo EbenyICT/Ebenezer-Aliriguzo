@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #d3d3d3;
@@ -28,7 +29,6 @@ body {
 
 .top-links a,
 .header-links a,
-nav a,
 .footer-links a {
     color: white;
     margin: 0 0.5rem;
@@ -62,33 +62,64 @@ header {
     width: 100%;
     top: 2rem;
     z-index: 999;
-    height: 2rem;
+    height: auto;
 }
 
-nav {
-    background-color: #0288d1;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 4rem;
-    z-index: 998;
-    height: 2rem;
-}
-
-.headerIcons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-.headerIcons i {
-    color: white;
-    margin: 0 0.5rem;
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
     cursor: pointer;
+    margin: 10px;
 }
 
+/* Desktop Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 10px;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+.mobile-nav a {
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles for Navigation */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+}
+
+/* Main Content */
 main {
     margin-top: 6rem;
     overflow-y: scroll;
@@ -169,6 +200,7 @@ main {
     text-align: center;
 }
 
+/* Footer */
 footer {
     background-color: #1e3a5f;
     color: white;
@@ -224,84 +256,8 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design */
+/* Responsive Footer */
 @media (max-width: 768px) {
-    .upload-form,
-    .gallery-item {
-        width: 80%;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Initially hide the nav for small screens */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-}
-
-.hamburger-menu {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 10px;
-}
-
-/* For mobile view */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-/* Initially hide the nav for small screens */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-}
-
-.hamburger-menu {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 10px;
-}
-
-/* For mobile view */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-}
-
     .footer-links {
         flex-direction: column;
         align-items: center;
