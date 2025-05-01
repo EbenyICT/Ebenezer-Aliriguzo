@@ -382,4 +382,21 @@ footer {
 .form-container p {
     margin-top: 1rem;
 }
+
+    .password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.password-container .toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
 }
