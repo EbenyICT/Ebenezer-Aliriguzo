@@ -11,8 +11,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
-      document.body.insertAdjacentHTML('afterbegin', data);
-      console.log('Header loaded successfully');
+      const headerPlaceholder = document.querySelector('header'); // Find the existing header placeholder
+      if (headerPlaceholder) {
+        headerPlaceholder.outerHTML = data; // Replace the placeholder header with the loaded header
+        console.log('Header loaded successfully');
+
+        // Attach the hamburger menu toggle functionality after header is loaded
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (hamburgerMenu && mobileMenu) {
+          hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+          });
+        }
+      }
     })
     .catch(error => console.error('Error loading header:', error))
     .finally(() => {
@@ -103,15 +115,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       scrollToTopButton.style.display = 'block';
     } else {
       scrollToTopButton.style.display = 'none';
-    }
-  });
-
-  // Hamburger menu toggle
-  document.addEventListener('click', (event) => {
-    const menu = document.getElementById('mobileMenu');
-    const hamburger = event.target.closest('.hamburger-menu');
-    if (hamburger) {
-      menu.classList.toggle('show');
     }
   });
 
