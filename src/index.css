@@ -319,4 +319,67 @@ footer {
     .footer-links a {
         margin: 0.5rem 0;
     }
+
+    .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+    max-width: 400px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container form {
+    width: 100%;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-container .password-container i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.form-container button {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #025f9c;
+}
+
+.form-container p {
+    margin-top: 1rem;
+}
 }
