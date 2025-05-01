@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
 
+  // Show spinner while loading
+  const spinner = document.getElementById('spinner');
+  if (spinner) {
+    spinner.classList.add('show');
+  }
+
   // Dynamically load the header
   fetch('header.html')
     .then(response => response.text())
@@ -8,7 +14,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
       document.body.insertAdjacentHTML('afterbegin', data);
       console.log('Header loaded successfully');
     })
-    .catch(error => console.error('Error loading header:', error));
+    .catch(error => console.error('Error loading header:', error))
+    .finally(() => {
+      // Hide spinner once the header is loaded
+      if (spinner) {
+        spinner.classList.remove('show');
+      }
+    });
 
   // Dynamically load the footer
   fetch('footer.html')
@@ -91,6 +103,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
       scrollToTopButton.style.display = 'block';
     } else {
       scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  // Hamburger menu toggle
+  document.addEventListener('click', (event) => {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = event.target.closest('.hamburger-menu');
+    if (hamburger) {
+      menu.classList.toggle('show');
     }
   });
 
