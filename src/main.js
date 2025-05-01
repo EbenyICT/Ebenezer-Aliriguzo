@@ -1,38 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
 
-  // Show spinner while loading
-  const spinner = document.getElementById('spinner');
-  if (spinner) {
-    spinner.classList.add('show');
-  }
-
   // Dynamically load the header
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
-      const headerPlaceholder = document.querySelector('header'); // Find the existing header placeholder
-      if (headerPlaceholder) {
-        headerPlaceholder.outerHTML = data; // Replace the placeholder header with the loaded header
-        console.log('Header loaded successfully');
-
-        // Attach the hamburger menu toggle functionality after header is loaded
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (hamburgerMenu && mobileMenu) {
-          hamburgerMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('show');
-          });
-        }
-      }
+      document.body.insertAdjacentHTML('afterbegin', data);
+      console.log('Header loaded successfully');
     })
-    .catch(error => console.error('Error loading header:', error))
-    .finally(() => {
-      // Hide spinner once the header is loaded
-      if (spinner) {
-        spinner.classList.remove('show');
-      }
-    });
+    .catch(error => console.error('Error loading header:', error));
 
   // Dynamically load the footer
   fetch('footer.html')
